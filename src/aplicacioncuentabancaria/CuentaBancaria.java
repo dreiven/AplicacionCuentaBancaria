@@ -69,6 +69,7 @@ public class CuentaBancaria implements Metodos {
     }
 
     @Override
+    //GESTION DE INGRESO INCORRECTA NO SUMA EL NUEVO RESULTADO
     //metodo de interfaz Metodos sobrecargado para añadir al deposito actual de la cuenta bancaria
     public void GestionIngreso(CuentaBancaria a) {
         //declaramos variable para sumar el saldo ingresado al actual
@@ -127,7 +128,12 @@ public class CuentaBancaria implements Metodos {
                     break;
 
                 case "2":
-                      
+                      ///VALIDAR DEPOSITE OPCION 3 PENDIENTE//////
+                    ///VALIDAR DEPOSITE OPCION 3 PENDIENTE//////
+                    ///VALIDAR DEPOSITE OPCION 3 PENDIENTE/////////VALIDAR DEPOSITE OPCION 3 PENDIENTE/////////VALIDAR DEPOSITE OPCION 3 PENDIENTE//////
+                    ///VALIDAR DEPOSITE OPCION 3 PENDIENTE//////
+                    
+                    
                     break;
 
                 case "3":
