@@ -65,7 +65,37 @@ public class CuentaBancaria implements Metodos {
     @Override
     //metodo de interfaz Metodos sobrecargado para modificar el deposito actual de la cuenta bancaria
     public void GestionDeposito(CuentaBancaria a) {
-        
+        String opcion = "0";// 2100 0813 61 0123456789
+        Boolean cond = false;
+        while(!cond){
+        System.out.println("__________________________________");
+        System.out.println("___________Gestión Deposito_______");
+
+        System.out.println("1.Realizar retirada de efectivo");
+        System.out.println("2.Realizar transferencia");
+        Scanner scn = new Scanner(System.in);
+        opcion = scn.nextLine();
+        switch (opcion) {
+
+            case "1":
+                Double numeroRestar=0.0;
+                String restar = JOptionPane.showInputDialog("Cuanto desea retirar?", "\n" +a.getSaldoActual());
+                numeroRestar = Double.parseDouble(restar);
+                numeroRestar = a.getSaldoActual() - numeroRestar;
+                a.setSaldoActual(numeroRestar);
+                System.out.println("Saldo retirado correctamente ");
+                System.out.println("Saldo restante en cuenta :" + a.getSaldoActual()+" €");
+                opcion = "0";
+            case "2":
+                
+                break;
+                
+            default:
+                cond = true;
+                break;
+
+        }
+        }
     }
 
     @Override
@@ -93,7 +123,7 @@ public class CuentaBancaria implements Metodos {
 
         System.out.println("Nombre: " + a.getNombre());
         System.out.println("CCC: " + a.getCodigoCuenta());
-        System.out.println("Saldo: " + a.getSaldoActual() + " €");
+        System.out.println("Saldo: " + a.getSaldoActual().floatValue() + " €");
 
     }
 
@@ -128,12 +158,12 @@ public class CuentaBancaria implements Metodos {
                     break;
 
                 case "2":
-                      ///VALIDAR DEPOSITE OPCION 3 PENDIENTE//////
+                    ///VALIDAR DEPOSITE OPCION 3 PENDIENTE//////
                     ///VALIDAR DEPOSITE OPCION 3 PENDIENTE//////
                     ///VALIDAR DEPOSITE OPCION 3 PENDIENTE/////////VALIDAR DEPOSITE OPCION 3 PENDIENTE/////////VALIDAR DEPOSITE OPCION 3 PENDIENTE//////
                     ///VALIDAR DEPOSITE OPCION 3 PENDIENTE//////
-                    
-                    
+                    a.GestionDeposito(a);
+
                     break;
 
                 case "3":
@@ -150,7 +180,7 @@ public class CuentaBancaria implements Metodos {
 
                 default:
                     System.out.println("Opcion Incorrecta");
-                    salir = true;
+//                    salir = true;
                     break;
 
             }

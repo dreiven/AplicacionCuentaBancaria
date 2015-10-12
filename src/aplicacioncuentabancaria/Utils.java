@@ -38,6 +38,7 @@ public class Utils {
 
     }
 //Metodo  para comprobar el digito de control es correcto asociado a la entidad ,oficina y cuenta bancaria introducidas en el CCC 
+
     public static int obtenerDigito(String valor) {
         Integer[] valores = new Integer[]{1, 2, 4, 8, 5, 10, 9, 7, 3, 6};
 
@@ -67,7 +68,6 @@ public class Utils {
 
         }
 
-        
     }
 
     public static void MenuPrincipal(CuentaBancaria[] b) {
@@ -163,33 +163,22 @@ public class Utils {
         String busquedaNombre = JOptionPane.showInputDialog(null, "Introduzca Nombre y Apellidos a Buscar");
         //se solicita al usuario el CCC a buscar y se guarda en busquedaCcc
         String busquedaCcc = JOptionPane.showInputDialog(null, "Introduzca CCC a buscar" + " 20 digitos");
-
+        Boolean encontrado = false;
         for (int i = 0; i < b.length; i++) {
             //comparamos el valor almacenado en busquedaNombre con el atributo nombre del array b,si es true avanza al 2º if
-            if (busquedaNombre.equalsIgnoreCase(b[i].getNombre())) {
+            if (busquedaNombre.equalsIgnoreCase(b[i].getNombre()) && (busquedaCcc.equalsIgnoreCase(b[i].getCodigoCuenta()))) {
                 //comparamos el valor almacenado en busquedaCcc con el atributo CodigoCuenta del array b, si es true avanza al siguiente menu
-               if (busquedaCcc.equalsIgnoreCase(b[i].getCodigoCuenta())){
+
                 //Llamamos al metodo  MenuCuenta y le pasamos el objeto CuentaBancaria que concuerda con el introducido por el usuario 
                 cnt2.MenuCuenta(b[i]);
                 break;
-               
-               
-               }else{
-                   //si no encuentra la cuenta muestra un mensaje de error
-               JOptionPane.showMessageDialog(null, "Cuenta  No Encontrada");
-                break;
-               
-               
-               }
-               
-            } else {
-                 //si no encuentra un nombre igual al enviado muestra un error 
-                JOptionPane.showMessageDialog(null, "Cliente  No Encontrado");
-                break;
+
             }
 
         }
+        JOptionPane.showMessageDialog(null, "Cliente no encontrado");
+        System.out.println("Cliente no encontrado");
 
     }
-          
+
 }
