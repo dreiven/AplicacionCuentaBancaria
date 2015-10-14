@@ -79,7 +79,7 @@ public class CuentaBancaria implements Metodos {
 
             case "1":
                 Double numeroRestar=0.0;
-                String restar = JOptionPane.showInputDialog("Cuanto desea retirar?", "\n" +a.getSaldoActual());
+                String restar = JOptionPane.showInputDialog("Cuanto desea retirar?", "\n" +a.getSaldoActual());           
                 numeroRestar = Double.parseDouble(restar);
                 numeroRestar = a.getSaldoActual() - numeroRestar;
                 a.setSaldoActual(numeroRestar);
@@ -158,10 +158,7 @@ public class CuentaBancaria implements Metodos {
                     break;
 
                 case "2":
-                    ///VALIDAR DEPOSITE OPCION 3 PENDIENTE//////
-                    ///VALIDAR DEPOSITE OPCION 3 PENDIENTE//////
-                    ///VALIDAR DEPOSITE OPCION 3 PENDIENTE/////////VALIDAR DEPOSITE OPCION 3 PENDIENTE/////////VALIDAR DEPOSITE OPCION 3 PENDIENTE//////
-                    ///VALIDAR DEPOSITE OPCION 3 PENDIENTE//////
+                 
                     a.GestionDeposito(a);
 
                     break;
