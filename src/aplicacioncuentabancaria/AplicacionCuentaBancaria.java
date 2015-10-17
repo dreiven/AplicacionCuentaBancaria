@@ -17,7 +17,7 @@ public class AplicacionCuentaBancaria {
     public static void main(String[] args) {
         // 2100 0813 61 0123456789 cuenta valida de prueba
 
-        CuentaBancaria cnt1 = new CuentaBancaria();
+     
 
         //se crea array de objetos CuentaBancaria
         CuentaBancaria clientes1[] = new CuentaBancaria[3];

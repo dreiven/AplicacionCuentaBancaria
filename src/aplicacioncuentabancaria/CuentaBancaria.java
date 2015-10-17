@@ -99,7 +99,6 @@ public class CuentaBancaria implements Metodos {
     }
 
     @Override
-    //GESTION DE INGRESO INCORRECTA NO SUMA EL NUEVO RESULTADO
     //metodo de interfaz Metodos sobrecargado para añadir al deposito actual de la cuenta bancaria
     public void GestionIngreso(CuentaBancaria a) {
         //declaramos variable para sumar el saldo ingresado al actual
